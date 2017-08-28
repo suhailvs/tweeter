@@ -15,7 +15,7 @@ def index(request):
     user = authenticate(username='bob', password='bob')
     if user is not None:
         login(request, user)
-        return render(request, 'tweeter/index.html')
+    return render(request, 'tweeter/index.html')
 
 
 class TweetViewSet(viewsets.ModelViewSet):
